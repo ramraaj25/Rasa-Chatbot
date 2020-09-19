@@ -79,7 +79,7 @@ events = {  # fetched from API
 class FetchEventsAction(Action):
 
     def name(self):
-        return "action_all_events"
+        return "action_fetch_all_events"
 
     def run(self, dispatcher, tracker, domain):
 

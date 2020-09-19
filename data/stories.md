@@ -31,7 +31,7 @@
 * greet
   - utter_greet
 * ask_which_events
-  - action_all_events
+  - action_fetch_all_events
 * bye OR thank
   - utter_goodbye
 
