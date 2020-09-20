@@ -10,10 +10,13 @@ intents:
 - deny
 - mood_great
 - mood_unhappy
+- ask_help
 - ask_which_events
 - human_handoff
 # - subscription_details
 - register_for_event
+- registration_details
+- domain_info
 
 entities:
 # - name
@@ -41,6 +44,9 @@ responses:
   - text: "Hey, I am _____\n You can ask me to:\n 1. Get all events details\n 2. Register\
       \ for an event. \n 3. Fetch contact details.\n 4. Subscribe you to our mail\
       \ list so that you can get notified of every upcoming event.\n 5. Provide feedback."
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
   utter_did_that_help:
   - text: Did that help you?
   utter_happy:
@@ -51,6 +57,13 @@ responses:
   - text: What is your email address?
   utter_ask_name:
   - text: What is your name?
+  utter_next_help:
+  - text: “Is there anything else I can help you with?”
+  utter_thanks:
+  - text: “It felt great to help you!”
+  - text: “Glad to help you!”
+  utter_sorry:
+  - text: “Really sorry. :( Please try again.”
   utter_default:
   - text: I did not understand
 #  utter_subscribe_slot_values:

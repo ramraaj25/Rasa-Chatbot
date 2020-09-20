@@ -23,7 +23,26 @@
 * deny
   - utter_goodbye
 
+## help 1
+* ask_which_events
+  - utter_next_help
+* mood_great
+  - utter_did_that_help
+* affirm
+  - utter_happy
+  - utter_thanks
+
+## help 2
+* ask_which_events
+  - utter_next_help
+* mood_unhappy
+  - utter_did_that_help
+* deny
+  - utter_sorry
+
 ## say goodbye
+* thank
+  - utter_thanks
 * bye
   - utter_goodbye
 
@@ -33,6 +52,22 @@
 * ask_which_events
   - action_fetch_all_events
 * bye OR thank
+  - utter_goodbye
+
+## Story 2
+* greet
+  - utter_greet
+* register_for_event
+  - action_utter_event_link
+* bye
+  - utter_goodbye
+
+## Story 3
+* greet
+  - utter_greet
+* registration_details
+  - action_utter_event_link
+* bye
   - utter_goodbye
 
 <!-- commented out
