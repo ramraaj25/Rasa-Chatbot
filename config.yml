@@ -9,6 +9,7 @@ pipeline:
   - name: "LanguageModelFeaturizer"
   - name: LexicalSyntacticFeaturizer
   - name: CountVectorsFeaturizer
+  - name: RegexFeaturizer
     OOV_token: oov
   - name: CountVectorsFeaturizer
     analyzer: "char_wb"

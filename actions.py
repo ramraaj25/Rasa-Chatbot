@@ -57,7 +57,7 @@
 #             "Thanks for subscribing")
 #         return []
 
-from rasa_sdk import Action
+from rasa_sdk import action
 
 events = {  # fetched from API
     1: {
