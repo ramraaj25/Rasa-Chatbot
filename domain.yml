@@ -35,9 +35,6 @@ responses:
     - payload: /action_utter_event_link
       title: Register for an Event
     text: Hey, Welcome to DSC-CVRGU. How can we assist you?
-  utter_cheer_up:
-  - image: https://i.imgur.com/nGF1K8f.jpg
-    text: 'Here is something to cheer you up:'
   utter_did_that_help:
   - text: Did that help you?
   utter_happy:
@@ -54,7 +51,7 @@ responses:
   - text: “It felt great to help you!”
   - text: “Glad to help you!”
   utter_sorry:
-  - text: “Really sorry. :( Please try again.”
+  - text: “Really sorry. :( \nPlease try again.”
   utter_default:
   - text: I did not understand
 actions:

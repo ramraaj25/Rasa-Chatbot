@@ -23,30 +23,24 @@
 * deny
   - utter_goodbye
 
-## help 1
+## Fetch events 1
 * ask_which_events
-  - utter_next_help
+  - action_fetch_all_events
 * mood_great
   - utter_did_that_help
 * affirm
   - utter_happy
   - utter_thanks
 
-## help 2
+## Fetch events 2
 * ask_which_events
+  - action_fetch_all_events
+* affirm
   - utter_next_help
-* mood_unhappy
-  - utter_did_that_help
 * deny
-  - utter_sorry
-
-## say goodbye
-* thank
   - utter_thanks
-* bye
-  - utter_goodbye
 
-## Story 1
+## Fetch events 3
 * greet
   - utter_greet
 * ask_which_events
@@ -54,9 +48,13 @@
 * bye OR thank
   - utter_goodbye
 
-## Story 2
-* greet
-  - utter_greet
+## say goodbye
+* thank
+  - utter_thanks
+* bye
+  - utter_goodbye
+
+## Event registration
 * register_for_event
   - action_utter_event_link
 * bye
