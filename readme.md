@@ -8,9 +8,9 @@ For those who want to run this project according to its requirements, please fol
 
 #### Make a new enviroment (Recommended)
 ```bash
-conda create -n myenv python=3.7
+conda create -n <env name> python=3.7
 ```
-We are using python = 3.7 because rasa did not support python 3.8 when this project was developed.
+We are using python = 3.7 as rasa did not support python 3.8+ when this project was under development.
 #### Activate the Enviroment
 ```bash
 conda activate <env name>
@@ -33,7 +33,7 @@ rasa train
 rasa run actions
 ```
 
-There are two options to run the rasa based chatbot.
+#### There are two options to run the rasa based chatbot:
 
 #### Running chatbot on command line
 
