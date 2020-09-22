@@ -5,8 +5,11 @@
 - Hey bot
 - Hello
 - Good morning
+- Good afternoon
+- Good evening
 - hi again
 - hi folks
+- what’s up
 
 ## intent:bye
 - goodbye
@@ -18,6 +21,8 @@
 - bye bye
 - gotta go
 - farewell
+- See You Later
+- Bye
 
 ## intent:thank
 - Thanks
@@ -33,6 +38,8 @@
 - of course
 - that sounds good
 - correct
+- Good to go
+- Sure
 
 ## intent:deny
 - no
@@ -41,6 +48,7 @@
 - don't like that
 - no way
 - not really
+- Nope
 
 ## intent:mood_great
 - perfect
@@ -64,9 +72,21 @@
 - extremely sad
 - so sad
 
+## intent:ask_help
+- Hey, i need help
+- i’m stuck
+- i don’t know what to do next
+- please help me out
+- help please
+- I Have A Doubt
+- I Have A Query
+- I Have A Question
+- What next
+
 ## intent:ask_which_events
 - Can you tell me what kinds of events you have?
 - Could you please list the kinds of events that you have?
+- I need the list of all the events.
 - Give me the events you have.
 - Tell me all of the events you have.
 - Tell me the events you have
@@ -76,6 +96,7 @@
 - What are the events that you have?
 - What do you know about rasa meetups?
 - What events are scheduled for today?
+- What is The Schedule of all The Events
 - What events are there?
 - What is on the calendar for this month?
 - What kinds of events are happening here?
@@ -103,6 +124,7 @@
 - Assuming that there is an upcoming event, when is that event?
 - At what time is the next event scheduled?
 - If there is an upcoming event when is it?
+- Give Me The Details Of The Upcoming Event
 - On what day is the next event scheduled?
 - What and when is the next event?
 - What even is coming up next and when is it please?
@@ -111,13 +133,28 @@
 - When is it that the next event occurs?
 - When is the next event scheduled?
 - when is the next event?
+- How Many Events Are There
+- List Of All The Events
+- How many events have you got
+- Give Me The Details Of The Next Event
+- Keep Me Updated About The Event
+- Keep Me Posted About The Event
+- Notify Me About The Next Event
+- give me details about next session
+- give me details about the next event
 
 ## intent:human_handoff
 - Can I speak to anyone who can really help me?
+- Connect me with dsc lead
+- How can I contact the dsc lead
 - Could I talk to someone from [Web Development](department) Team?
 - Could I talk to someone from [Machine Learning](department) Team?
 - Could I talk to someone from [Android](department) Team?
 - Could I talk to someone from [Competitive Programming](department) Team?
+- I want to connect with [Web Development](department) Team?
+- I want to connect with [Machine Learning](department) Team?
+- I want to connect with [Android](department) Team?
+- I want to connect with [Competitive Programming](department) Team?
 - Can I talk to [Yashraj Jain](core_member_name)
 - Can I talk to [Anita](core_member_name)
 - Can I talk to [Aashutosh Agrahari](core_member_name)
@@ -195,11 +232,45 @@
 - Register [AI](event_name)
 - Enroll in [MLFiesta](event_name)
 - Enroll [webinar](event_name)
+- Where Can I Register For The Events
+- I Want To Register For The Upcoming Event
+- How Can I Register For The Next Event
+
+## intent: registration_details
+- I Want To Know My Registration Details
+- How Can I Get The Details About My Registration
+- How Many Events Am I Registered In
+- Provide Me The Details Of My Registration
+- What Are The Details Of My Registration
+- Information About My Registration
+- info about registration
+- take me to the registration page
+
+## intent: domain_info
+- What Are The Various Domains Available
+- How Many Domains Are There
+- List of all the domains
+- How Many Types Of Domains have you got
+- How Can I Know About [Web Development](department) domain
+- How Can I Know About [Machine Learning](department) domain
+- How Can I Know About [Android](department) domain
+- How Can I Know About [Competitive programming](department) domain
+- Details of [Web Development](department) domain
+- Details of [Machine Learning](department) domain
+- Details of [Android](department) domain
+- Details of [Competitive programming](department) domain
+- I want information of [Web Development](department) domain
+- I want information of [Machine Learning](department) domain
+- I want information of [Android](department) domain
+- I want information of [Competitive programming](department) domain
 
 ## synonym: Web Development
 - web dev
 - web
-- browser
+- front end
+- back end
+- front end Development
+- back end Development
 
 ## synonym: Machine Learning
 - ML
@@ -210,11 +281,11 @@
 
 ## synonym: Android
 - mobile
+- app development
 
 ## synonym: Competitive Programming
 - cp
-- competitive
+- competitive coding
 
 ## regex: email_extract
 - [\w\.-]+@[\w\.-]+
-
