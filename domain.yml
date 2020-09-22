@@ -1,7 +1,6 @@
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: false
-
 intents:
 - greet
 - bye
@@ -12,16 +11,11 @@ intents:
 - mood_unhappy
 - ask_which_events
 - human_handoff
-# - subscription_details
 - register_for_event
-
 entities:
-# - name
-# - email
 - department
 - core_member_name
 - event_name
-
 slots:
   core_member_name:
     type: unfeaturized
@@ -29,13 +23,6 @@ slots:
     type: unfeaturized
   event_name:
     type: unfeaturized
-#  email:
-#    type: unfeaturized
-#    auto_fill: false
-#  name:
-#    type: unfeaturized
-#    auto_fill: false
-
 responses:
   utter_greet:
   - text: "Hey, I am _____\n You can ask me to:\n 1. Get all events details\n 2. Register\
@@ -53,13 +40,6 @@ responses:
   - text: What is your name?
   utter_default:
   - text: I did not understand
-#  utter_subscribe_slot_values:
-#  - text: "Your details are as follows:\n Name: {name}\n Email: {email}\n Confirm?"
-
 actions:
 - action_fetch_all_events
 - action_utter_event_link
-# - action_submit_subscription_details
-
-# forms:
-# - subscribe_form
