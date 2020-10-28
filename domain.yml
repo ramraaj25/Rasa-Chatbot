@@ -20,6 +20,8 @@ entities:
 - department
 - core_member_name
 - event_name
+- name
+- email
 slots:
   core_member_name:
     type: unfeaturized
@@ -27,14 +29,13 @@ slots:
     type: unfeaturized
   event_name:
     type: unfeaturized
+  name:
+    type: unfeaturized
+  email: 
+    type: unfeaturized
 responses:
   utter_greet:
-  - buttons:
-    - payload: /action_fetch_all_events
-      title: 'Event Details '
-    - payload: /action_utter_event_link
-      title: Register for an Event
-    text: Hey, Welcome to DSC-CVRGU. How can we assist you?
+    text: Hey, Welcome to DSC-CVRGU. How can we assist you? \nYou can ask me to \n1.Get all upcoming events details \n2. Register for an event. \n3. Get contact details of an associate. \n4. Take your feedback
   utter_did_that_help:
   - text: Did that help you?
   utter_happy:
@@ -57,3 +58,5 @@ responses:
 actions:
 - action_fetch_all_events
 - action_utter_event_link
+- action_utter_contact_details
+- action_utter_take_feedback

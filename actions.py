@@ -57,6 +57,7 @@
 #             "Thanks for subscribing")
 #         return []
 
+import requests
 from rasa_sdk import action
 
 events = {  # fetched from API
@@ -106,3 +107,32 @@ class EventLinkAction(Action):
         dispatcher.utter_message(f"Link for {event['title']}: {event['link']}")
 
         return []
+
+
+class ContactAction(Action):
+    def name(self):
+        return "action_utter_contact_details"
+
+    def run(self, dipatcher, tracker, domain):
+
+        department = tracker.get_slots("department")
+        core_mem_name = tracker.get_slot("core_member_name")
+
+        # Search for contact details
+
+
+feedback_url =  # API endpoint
+
+
+class FeedbackAction(Action):
+    def name(self):
+        return "action_utter_take_feedback"
+
+    def run(self, dispatcher, tracker, domain):
+
+        name = tracker.get_slots("name")
+        email = tracker.get_slots("email")
+        msg = tracker.latest_message.text
+
+        requests.post(feedback_url, data={
+                      "name": name, "email": email, "message": msg})
