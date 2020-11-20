@@ -58,22 +58,29 @@
 #         return []
 
 import requests
-from rasa_sdk import action
+from rasa_sdk import Action
+import json
 
-events = {  # fetched from API
-    1: {
-        "title": "MLFiesta",
-        "link": "https://example.com/mlfiesta",
-    },
-    2: {
-        "title": "Hackathon",
-        "link": "https://example.com/hackathon",
-    },
-    3: {
-        "title": "Android Workshop",
-        "link": "https://example.com/android",
-    },
-}
+# events = {  # fetched from API
+#     1: {
+#         "title": "MLFiesta",
+#         "link": "https://example.com/mlfiesta",
+#     },
+#     2: {
+#         "title": "Hackathon",
+#         "link": "https://example.com/hackathon",
+#     },
+#     3: {
+#         "title": "Android Workshop",
+#         "link": "https://example.com/android",
+#     },
+# }
+
+fetched = requests.get(
+    "https://us-central1-dsc-cgu.cloudfunctions.net/events/api/event-details")
+
+
+fetched_events = json.loads(fetched.text)
 
 
 # Action to utter all events
@@ -88,8 +95,10 @@ class FetchEventsAction(Action):
 
         dispatcher.utter_message("List of all events are as follows: ")
         # Display events
-        for idx, event_id in enumerate(events):
-            dispatcher.utter_message(f"{idx + 1}. {events[event_id]['title']}")
+        for idx, event in enumerate(fetched_events):
+            dispatcher.utter_message(f"{idx + 1}. {event['EventTitle']}")
+            dispatcher.utter_message(
+                f"Description: {event['EventDescription']}")
 
         return []
 
@@ -103,8 +112,12 @@ class EventLinkAction(Action):
     def run(self, dispatcher, tracker, domain):
 
         event_id = tracker.get_slots("event_id")
-        event = events[event_id]
-        dispatcher.utter_message(f"Link for {event['title']}: {event['link']}")
+        for event in fetched_events:
+            if event['EventId'] == event_id:
+                cur_event = event
+                break
+        dispatcher.utter_message(
+            f"Link for {cur_event['EventTitle']}: {cur_event['EventLink']}")
 
         return []
 
@@ -120,8 +133,10 @@ class ContactAction(Action):
 
         # Search for contact details
 
+        # Contact details not available yet
 
-feedback_url =  # API endpoint
+
+feedback_url = 'xyz'  # API endpoint for feedback
 
 
 class FeedbackAction(Action):
